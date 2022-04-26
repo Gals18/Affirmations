@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kode XML diatas digunakan untuk membuat layout aplikasi android;
+XML bertugas untuk membentuk struktur proyek pada java
+yang menggunakan Maven, XML digunakan sebagai format file SVG, DOCX, dsb -->
+
+
+<!-- kode dibawah ini adalah material cardview.
+ Material Card View adalah komponen untuk menambahkan sebuah card view yang sudah ter-style
+ dengan bagus dari sananya. dan dari sini sudah terdapat aturan untuk padingnya yaitu 16dp.
+ kemudian jarak tepi dari parent layout dengan pading yaitu 8dp.
+ dan untuk komponen lebar dan tingginya sebesar tampilan layar otomatis.
+-->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_margin="8dp">
+
+
+<!-- kode dibawah ini merupakan kode untuk linearlayout.
+ adalah kelompok tampilan yang menyejajarkan semua turunan dalam satu arah, baik vertikal maupun horizontal.
+ Anda bisa menetapkan arah tata letak dengan atribut android:orientation. lebih singkatnya adalah kita menampilkan
+ berbagai data gambar atau kalimat secara sejajar, dan sejajarnya itu kita dapat memilih apakah akan
+ disejajarkan secara vertikal atau horizontal. namun dari kode dibawah ini menggunakan
+ orientasi vertikal, artinya menurun.
+ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<!-- Kode dibawah ini merupakan untuk atributimageview. lebih singkatnya imageview digunakan
+ untuk menampilkan suatu gambar dari gambar yang telah kita pilih. dari elemen ini kita juga dapat
+ mengatur komponen id, dan batas layout-->
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:layout_height="194dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop" />
+<!-- Kode dibawah ini merupakan untuk atribut textview. lebih singkatnya textview digunakan
+     untuk menampilkan suatu kata atau kalimat yang kita tentukan. dari elemen ini kita juga dapat
+     mengatur komponen id, pading, jarak pading dan batas layout-->
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

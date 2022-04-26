@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kode XML diatas digunakan untuk membuat layout aplikasi android;
+XML bertugas untuk membentuk struktur proyek pada java
+yang menggunakan Maven, XML digunakan sebagai format file SVG, DOCX, dsb -->
+
+<!-- kode dibawah ini merupakan kode untuk constraint layout.
+ConstraintLayout merupakan salah satu komponen ViewGroup
+yang dapat kita gunakan untuk menyusun tampilan aplikasi yang kompleks tanpa adanya nested layout.
+lebih singkatnya constraint layout ini digunakan untuk membuat suatu tampilan tanpa adanya suatu
+kondisi di mana sebuah parent layout memiliki parent layout lagi di dalamnya.
+Dalam elemen ini terdapat berbagai kode kode yang digunakan
+ada kode untuk mengatur id suatu elemen yang digunakan.
+terdapat juga kode untuk mencocokan suatu laman atau mengatur lebar
+dan tinggi dengan menyesuaikan kelas induk yaitu dengan match_parent -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!-- Kode dibawah ini digunakan untuk membuat recycleview.
+RecyclerView adalah tipe baru dari ListView yang membantu kita
+membuat aplikasi android yang lebih lancar dan efektif dengan banyak tampilan.
+sehingga kita dapat menggulir suatu gambar atau kalimat. atau dengan kata lain men-scroll
+RecyclerView harus menggunakan custom layout yang artinya
+kita semakin mudah untuk menampilkan data-data dengan desain yang kita inginkan.
+pada element ini tedapat berbagai komponen lainnya
+seperti untuk ukuran tampilan view. kemudian warna background.
+jarak kanan, kiri atas dan bawah. dan pastinya juga menggunakan id.-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="397dp"
+        android:layout_height="708dp"
+        android:background="@color/Material_500"
+        android:scrollbars="vertical"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<!-- Kode dibawah ini digunakan untuk membuat cardview.
+ CardView merupakan view yang biasa digunakan untuk pembungkusan data (sepaket data — beberapa view)
+ yang ditandai dengan tampilan view nya yang memiliki drop shadow (elevation)
+ dan corner radius. Adapun CardView ini merupakan subclass dari FrameLayout.
+ lebih singkatnya adalah membuat suatu bagian kolom paket yang digunakan untuk menjelaskan data satu persatu
+ dalam elemen cardview ini memiliki berbagai komponen lainnya seperti :
+ id, batas batas layout atas bawah kanan dan kiri, dan juga constraint untuk batas batas-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="731dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view" />
+<!-- digunakan untuk penutup constrain layout-->
+</androidx.constraintlayout.widget.ConstraintLayout>
